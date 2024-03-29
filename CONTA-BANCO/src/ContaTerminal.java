@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.math.BigDecimal;
 
 public class ContaTerminal {
+
     private int numero;
     private String agencia;
     private String nomeCliente;
@@ -28,8 +29,7 @@ public class ContaTerminal {
 
     public void exibirMensagem() {
         // Correção realizada aqui para usar o nome do cliente, agência, número da conta e saldo nas posições corretas
-        String mensagem = "Olá " + this.nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " +
-                this.agencia + ", conta " + this.numero + " e seu saldo " + this.saldo + " já está disponível para saque.";
+        String mensagem = String.format("Olá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo %s já está disponível para saque.", this.nomeCliente, this.agencia, this.numero, this.saldo.toString());
         System.out.println(mensagem);
     }
 
